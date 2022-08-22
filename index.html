@@ -25,7 +25,7 @@
                         <h2 class="card-title">Lionel Messi</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -37,7 +37,7 @@
                         <h2 class="card-title">Neymar Jr.</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -49,7 +49,7 @@
                         <h2 class="card-title">Kylian Mbappé</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                         <h2 class="card-title">Vítor Machado</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -73,7 +73,7 @@
                         <h2 class="card-title">Sergio Ramos</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -85,7 +85,7 @@
                         <h2 class="card-title">Renato Sanches</h2>
                         <p>36 Goals  || 120 Assist</p>
                         <div class="card-actions justify-end">
-                            <button class="btn btn-block">SELECT</button>
+                            <button class="btn btn-block" onclick="addToPlayers(this)">SELECT</button>
                         </div>
                         </div>
                     </div>
@@ -93,9 +93,31 @@
                 
             </div>
             <!-- Players added section -->
-            <div>Selected - V</div>
+            <div>
+                <h1 class="text-5xl">Selected - V</h1>
+                <!-- table -->
+                <div class="overflow-x-auto">
+                    <table class="table table-zebra w-full">
+                    <thead >
+                        <tr>
+                        <th></th> 
+                    </tr>
+                    </thead> 
+                    <tbody id="players-name">
+                        <tr>
+                            <th>1</th>
+                            <td>Lionel Messi</td>
+                        </tr>
+                    
+                    </tbody> 
+                    </table>
+                </div>
+
+            </div>
+            
+            
         </div>
     </section>
-    
+    <script src="players.js"></script>
 </body>
 </html>
