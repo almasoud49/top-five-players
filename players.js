@@ -22,6 +22,8 @@ if(playerNumber.length > 5){
 function addToPlayers(element){
 const playersName = element.parentNode.parentNode.children[0].innerText;
 
+element.disabled = true;
+
 const players = {
     playerName : playersName,
 }
