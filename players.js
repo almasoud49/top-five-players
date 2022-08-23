@@ -1,35 +1,33 @@
-const playersArray = [];
+const playerArray = [];
 
-function displayPlayerName(playerNumber){
-
-
+function display(playerNumber){
 const tableBody = document.getElementById('players-name');
-
 tableBody.innerHTML = '';
-for(let i = 0 ; i< playerNumber.length; i++){
-    // const name = playersArray[i].playersName
+for(i = 0; i<=4; i++){
     
+    const name = playerArray[i].playerName;
     const tr = document.createElement('tr');
     tr.innerHTML = `
     <th>${i + 1}</th>
-    <td>${playersArray[i].playersName}</td>
+    <td>${name}</td>
+
     `;
     tableBody.appendChild(tr);
 }
+if(playerNumber.length > 5){
+    alert('Access denied!')
+}
 }
 
-function addToPlayers(players){
-    const playersName= players.parentNode.parentNode.children[0].innerText ;
-    
+function addToPlayers(element){
+const playersName = element.parentNode.parentNode.children[0].innerText;
 
-    const player ={
-        playerName:playersName,
-        
-    }
+const players = {
+    playerName : playersName,
+}
 
-    playersArray.push(player);
+playerArray.push(players);
 
-    // document.getElementById('selected-players').innerText = playersArray.length;
-    displayPlayerName(playersArray);
-    
+display(playerArray);
+// console.log(playerArray)
 }
