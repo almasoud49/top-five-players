@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
     
 </head>
-<body>
+<body class="bg-gray-400">
     <header class="bg-slate-900 h-52 mt-0">
         <h1 class="text-7xl text-center text-orange-700 py-16 mt-6">Select Your Best Five</h1>
         
@@ -99,7 +99,7 @@
     
                 </div>
                 <Section>
-                    <div class="grid grid-rows-2 grid-flow-col gap-4">
+                    <div class="grid grid-rows-2 grid-flow-col max-width gap-4">
                         <div>
                         <!-- Players added section -->
                 <div class="w-96 h-72 text-white bg-slate-900" id="selected-players">
@@ -133,21 +133,23 @@
                 <div>
                 <h1  class="text-2xl text-center  ">Budget</h1>
             <div class="ml-2">
-                <h4>Per Player <input type="text" name="" id="" placeholder="1000" ></h4> <br>
-                <button class="btn btn-success bg-green-400 w-64 mb-2" type="submit">Calculate</button>
+                <h4>Per Player <input class="text-black" type="text" name="" id="per-player-cost" placeholder="1000" ></h4> <br>
+                <button id="btn-calculate" class="btn btn-success bg-green-400 w-64 mb-2" type="submit">Calculate</button>
             
 
-            <h4>Player Expenses $<span>00</span></h4>
+            <h4>Player Expenses $<span id="player-expenses">00</span></h4>
             </div>
+
+
             <div class="ml-2">
                 <!-- Calculate Total -->
-                <h4 class="mt-2">Manager <input type="text" name="" id="" placeholder="2000" ></h4>
+                <h4 class="mt-2">Manager <input class="text-black" type="text" name="" id="manager-cost" placeholder="2000" ></h4>
 
-                <h4 class="mt-2">Coach <input class="w-52" type="text" name="" id="" placeholder="4000" ></h4>
+                <h4 class="mt-2">Coach <input class="text-black" class="w-52" type="text" name="" id="coach-cost" placeholder="4000" ></h4>
 
-                <button class="btn btn-success bg-green-400 w-64 mt-2" type="submit">Calculate Total</button>
+                <button id="btn-calculate-total" class="btn btn-success bg-green-400 w-64 mt-2" type="submit">Calculate Total</button>
 
-                <h4>Total $<span>11000</span></h4>
+                <h4>Total $<span id="total">00</span></h4>
             </div>
 
             </div>
@@ -158,14 +160,13 @@
 
         </Section>
         
-            </div>
+        </div>
             
         <section>
-            
-        <!-- </section>
-        </section> -->
+        
     </main>
-    
+    <script src="common.js"></script>
     <script src="players.js"></script>
+    <script src="budget.js"></script>
 </body>
 </html>

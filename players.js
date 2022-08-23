@@ -31,5 +31,4 @@ const players = {
 playerArray.push(players);
 
 display(playerArray);
-// console.log(playerArray)
 }
